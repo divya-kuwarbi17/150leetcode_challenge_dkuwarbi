@@ -1,0 +1,17 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i=0
+        while i<len(nums):
+            a    = nums[i]
+            # print("I'm a",a)
+            if i!=0:
+                while i<len(nums) and a==nums[i]:
+                    # print(nums[i])
+                    nums.pop(i)
+                    
+                i = i+1
+            else:
+                i = i+1
+        # print(nums)
+        return int(len(nums))
+            
