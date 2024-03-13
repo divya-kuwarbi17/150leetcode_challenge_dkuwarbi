@@ -1,0 +1,24 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i = 0
+        nums2=[]
+        while i<len(nums):
+            temp = nums[i]
+            i = i+1
+            j = 0
+            nums2.append(temp)
+            while i<len(nums) and nums[i]==temp:
+                print("good",nums[i])
+                
+                
+                if j>=1:
+                    print("yes")
+                    nums.pop(i)
+                    i = i-1
+
+                else:
+                    nums2.append(nums[i])
+                i = i+1
+                j = j+1
+
+        return len(nums2)
