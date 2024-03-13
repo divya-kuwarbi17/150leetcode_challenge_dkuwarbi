@@ -1,0 +1,23 @@
+import math
+
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+
+        temp =0
+        j = 0
+        flag = math.floor(len(nums)/2)
+        print("I'm flag",flag)
+        nums_set = set(nums)
+        print("I'm nums set",nums_set)
+        for i in nums_set:
+            cnt = nums.count(i)
+            print(cnt)
+            if cnt>flag:
+                if cnt>temp:
+                    temp = cnt
+                    j = i
+            else:
+                continue
+
+        return j
